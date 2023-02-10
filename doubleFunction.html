@@ -1,0 +1,44 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>test</title>
+</head>
+
+<body>
+  <form>
+    <input type="text" id="name">
+    <input type="button" value="clear" onclick="showF1(), clearF()">
+  </form>
+<!-- //2 functions  -->
+  <div id="demo">hallo</div>
+  <script>
+    function clearF() {
+      var grab = document.getElementById("name");
+      if (grab.value != "") {
+        grab.value = "";
+      }
+    }
+
+    function showF() {
+      var grab = document.getElementById("name");
+      var demotext = document.getElementById("demo").innerHTML;
+      if (grab.value != "") {
+        console.log("grab " + grab.value)
+        document.getElementById("demo").innerHTML = grab.value;
+      }
+    }
+    //zonder if else
+    function showF1() {
+      var grab = document.getElementById("name");
+      var demotext = document.getElementById("demo").innerHTML;
+
+      console.log("grab " + grab.value)
+      document.getElementById("demo").innerHTML = grab.value;
+
+    }
+  </script>
+</body>
+
+</html>
